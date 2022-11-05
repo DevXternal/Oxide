@@ -1,5 +1,5 @@
-# i forgor
-some shit menu i work on at school/home.
+# Oxide
+some shit menu i work on.
 ## How to use:
 1. Open dev console (if its blocked i suggest u use snowlord7's console)
 2. Paste <a href="https://raw.githubusercontent.com/DevXternal/Oxide/main/menu-source.js">script</a>
