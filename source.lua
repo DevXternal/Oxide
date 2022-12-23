@@ -270,7 +270,7 @@ local function ONFY_fake_script() -- TextBox.Functions
 			end
 			
 			if script.Parent.Text == "darkmode" then
-				script.Parent.Parent.Visible = false
+				script.Parent.Parent:Destroy()
 				script.Parent.Parent.Parent.DarkMainFrame.Visible = true
 				script.Parent.Text = ""
 			end
