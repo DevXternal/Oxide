@@ -246,7 +246,7 @@ local function NRWJGPH_fake_script() -- TextBox.Functions
 			end
 			
 			if script.Parent.Text == "fly" then
-				loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Jump.txt"))()
+				loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Fly.txt"))()
 				script.Parent.Text = ""
 			end
 			
@@ -371,7 +371,7 @@ local function IJMZCS_fake_script() -- MainFrame.ChatCmds
 		
 		Player.Chatted:connect(function(cht)
 			if cht:match("/fly") then
-				loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Jump.txt"))()
+				loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Fly.txt"))()
 			end
 		end)
 		
