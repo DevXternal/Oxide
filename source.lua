@@ -246,8 +246,13 @@ local function NRWJGPH_fake_script() -- TextBox.Functions
 			end
 			
 			if script.Parent.Text == "fly" then
-				loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Fly.txt"))()
+				loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Jump.txt"))()
 				script.Parent.Text = ""
+			end
+			
+			if script.Parent.Text == "dex" then
+				 loadstring(game:HttpGet("https://raw.githubusercontent.com/JepDeveloper/Dex-Explorer-V4/main/EEE.lua"))()
+				 script.Parent.Text = ""
 			end
 		end
 	end)
@@ -358,15 +363,21 @@ local function IJMZCS_fake_script() -- MainFrame.ChatCmds
 				script.Parent.Parent.HelpFrame.Visible = true
 			end
 		
-		Player.Chatted:conenct(function(cht)
+		Player.Chatted:connect(function(cht)
 			if cht:match("/antifling") then
 				loadstring(game:HttpGet("https://controlc.com/2196b773/fullscreen.php?hash=00f543a2957d269eb21d06a33e5c1473&linenum=false", true))()
 			end
 		end)
 		
-		Player.Chatted:conenct(function(cht)
+		Player.Chatted:connect(function(cht)
 			if cht:match("/fly") then
-				loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Fly.txt"))()
+				loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Jump.txt"))()
+			end
+		end)
+		
+		Player.Chatted:connect(function(cht)
+			if cht:match("/dex") then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/JepDeveloper/Dex-Explorer-V4/main/EEE.lua"))()
 			end
 		end)
 	end)
