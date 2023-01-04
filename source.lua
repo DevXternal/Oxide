@@ -270,8 +270,11 @@ local function NRWJGPH_fake_script() -- TextBox.Functions
 			    	end)
 
     				if ErrorMessage and not Success then
-        			warn(ErrorMessage)
-					
+        				warn(ErrorMessage)
+    			end
+		end)
+
+coroutine.resume(Rejoin)
 				script.Parent.Text = ""
 			end
 		end
