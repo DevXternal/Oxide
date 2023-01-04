@@ -245,7 +245,7 @@ local function NRWJGPH_fake_script() -- TextBox.Functions
 			end
 			
 			if script.Parent.Text == "antifling" then
-				loadstring(game:HttpGet("https://controlc.com/2196b773/fullscreen.php?hash=00f543a2957d269eb21d06a33e5c1473&linenum=false", true))()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/DevXternal/Trioxide/main/LSLibary/antifling.lua", true))()
 				script.Parent.Text = ""
 			end
 			
@@ -390,7 +390,7 @@ local function IJMZCS_fake_script() -- MainFrame.ChatCmds
 		
 		Player.Chatted:connect(function(cht)
 			if cht:match("/antifling") then
-				loadstring(game:HttpGet("https://controlc.com/2196b773/fullscreen.php?hash=00f543a2957d269eb21d06a33e5c1473&linenum=false", true))()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/DevXternal/Trioxide/main/LSLibary/antifling.lua", true))()
 			end
 		end)
 		
