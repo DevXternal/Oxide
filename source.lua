@@ -258,6 +258,22 @@ local function NRWJGPH_fake_script() -- TextBox.Functions
 				 loadstring(game:HttpGet("https://raw.githubusercontent.com/JepDeveloper/Dex-Explorer-V4/main/EEE.lua"))()
 				 script.Parent.Text = ""
 			end
+			
+			if script.Parent.Text == "rejoin" then
+				local TeleportService = game:GetService("TeleportService")
+				local Players = game:GetService("Players")
+				local LocalPlayer = Players.LocalPlayer
+
+				local Rejoin = coroutine.create(function()
+			    	local Success, ErrorMessage = pcall(function()
+			        	TeleportService:Teleport(game.PlaceId, LocalPlayer)
+			    	end)
+
+    				if ErrorMessage and not Success then
+        			warn(ErrorMessage)
+					
+				script.Parent.Text = ""
+			end
 		end
 	end)
 	
@@ -382,6 +398,26 @@ local function IJMZCS_fake_script() -- MainFrame.ChatCmds
 		Player.Chatted:connect(function(cht)
 			if cht:match("/dex") then
 				loadstring(game:HttpGet("https://raw.githubusercontent.com/JepDeveloper/Dex-Explorer-V4/main/EEE.lua"))()
+			end
+		end)
+		
+		Player.Chatted:connect(function(cht)
+			if cht:match("/rejoin") then
+				local TeleportService = game:GetService("TeleportService")
+				local Players = game:GetService("Players")
+				local LocalPlayer = Players.LocalPlayer
+
+				local Rejoin = coroutine.create(function()
+			    	local Success, ErrorMessage = pcall(function()
+			        	TeleportService:Teleport(game.PlaceId, LocalPlayer)
+			    	end)
+
+    				if ErrorMessage and not Success then
+        				warn(ErrorMessage)
+    			end
+		end)
+
+coroutine.resume(Rejoin)
 			end
 		end)
 	end)
