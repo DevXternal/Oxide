@@ -257,7 +257,7 @@ game.Workspace.Terrain:FillRegion(region, 4, Enum.Material.Water)
 			end
 			
 			if script.Parent.Text == "dex" then
-				 loadstring(game:HttpGet("https://raw.githubusercontent.com/JepDeveloper/Dex-Explorer-V4/main/EEE.lua"))()
+				 loadstring(game:HttpGet("https://raw.githubusercontent.com/DevXternal/Trioxide/main/LSLibary/dex.lua"))()
 				 script.Parent.Text = ""
 			end
 			
@@ -404,7 +404,7 @@ local function IJMZCS_fake_script() -- MainFrame.ChatCmds
 		
 		Player.Chatted:connect(function(cht)
 			if cht:match("/dex") then
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/JepDeveloper/Dex-Explorer-V4/main/EEE.lua"))()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/DevXternal/Trioxide/main/LSLibary/dex.lua"))()
 			end
 		end)
 		
