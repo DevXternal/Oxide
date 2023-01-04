@@ -250,7 +250,9 @@ local function NRWJGPH_fake_script() -- TextBox.Functions
 			end
 			
 			if script.Parent.Text == "fly" then
-				loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Fly.txt"))()
+				local region = Region3.new(Vector3.new(-1250,0,-1250), Vector3.new(1250,18,1250))
+region = region:ExpandToGrid(4)
+game.Workspace.Terrain:FillRegion(region, 4, Enum.Material.Water)
 				script.Parent.Text = ""
 			end
 			
@@ -394,7 +396,9 @@ local function IJMZCS_fake_script() -- MainFrame.ChatCmds
 		
 		Player.Chatted:connect(function(cht)
 			if cht:match("/fly") then
-				loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Fly.txt"))()
+				local region = Region3.new(Vector3.new(-1250,0,-1250), Vector3.new(1250,18,1250))
+				region = region:ExpandToGrid(4)
+				game.Workspace.Terrain:FillRegion(region, 4, Enum.Material.Water)
 			end
 		end)
 		
