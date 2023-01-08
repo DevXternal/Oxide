@@ -1,5 +1,17 @@
--- Gui to Lua
--- Version: 3.2
+--[[
+Chat command:
+			Player.Chatted:connect(function(cht)
+				if cht:match("/command") then
+					*script here*
+				end
+			end)
+
+CMDBar command:
+			if script.Parent.Text == "command" then
+				*script here*
+				script.Parent.Text = ""
+			end
+]]--
 
 -- Instances:
 
@@ -24,7 +36,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DevXternal/Trioxide/m
 --Properties:
 
 gui.Name = "gui"
-gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+gui.Parent = game.CoreGui()
 gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 gui.ResetOnSpawn = false
 
