@@ -31,12 +31,14 @@ local TextLabel_7 = Instance.new("TextLabel")
 local TextLabel_8 = Instance.new("TextLabel")
 local TextLabel_9 = Instance.new("TextLabel")
 local TextButton = Instance.new("TextButton")
+
+COREGUI = game:GetService("CoreGui")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DevXternal/Trioxide/main/LSLibary/welcome-msg.lua", true))()
 
 --Properties:
 
 gui.Name = "gui"
-gui.Parent = game.CoreGui()
+gui.Parent = COREGUI
 gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 gui.ResetOnSpawn = false
 
