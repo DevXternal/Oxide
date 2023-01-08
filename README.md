@@ -5,3 +5,5 @@ This is an admin script...
 ```Lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DevXternal/Trioxide/main/source.lua", true))()
 ```
+# Contributing
+there are no rules, me and somescripter will see if the code works and we will merge it :)
