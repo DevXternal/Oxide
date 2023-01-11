@@ -1,18 +1,3 @@
---[[
-Chat command:
-			Player.Chatted:connect(function(cht)
-				if cht:match("/command") then
-					*script here*
-				end
-			end)
-
-CMDBar command:
-			if script.Parent.Text == "command" then
-				*script here*
-				script.Parent.Text = ""
-			end
-]]--
-
 -- Instances:
 
 local gui = Instance.new("ScreenGui")
